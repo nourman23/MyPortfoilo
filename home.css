@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant SC", serif;
+  font-family: "Ibarra Real Nova", serif;
+  font-family: "Karla", sans-serif;
+  font-size: 17px;
+}
+
+.homePage body {
+  color: #1e4800;
+  background-image: url("./images/about.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.homePage header {
+  background-color: white;
+}
+.homePage header nav {
+  width: 100%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: start;
+  justify-items: start;
+}
+
+.homePage header nav ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 165px);
+  align-items: center;
+  justify-items: center;
+  margin: 0;
+}
+.homePage header nav ul li {
+  padding: 10px;
+  margin-left: 20px;
+  transition: after 0.5s;
+}
+.homePage ul li a {
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+  color: #1e4800;
+}
+.homePage ul li a:hover {
+  transition: all 0.5s;
+  color: #4894009e;
+}
+.homePage ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  top: 30px;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: 50% 50%;
+  transition: transform 250ms;
+  width: 100%;
+  background-color: #4894009e;
+}
+.homePage ul li a:hover:after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.homePage .me {
+  width: 40%;
+  height: 30%;
+  /* border: 1px solid #78c5309e; */
+  border-radius: 60px 0px 60px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  letter-spacing: 3px;
+  /* #78c5309e */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: white;
+}
+
+.homePage .me span {
+  animation: name 1s infinite;
+  animation-direction: alternate;
+  font-size: 25px;
+
+  letter-spacing: 6px;
+}
+@keyframes name {
+  0% {
+    color: #4140409e;
+  }
+  50% {
+    color: #ca955c;
+  }
+  70% {
+    color: #3569059e;
+  }
+  100% {
+    color: #57b0049e;
+  }
+}
+
+@media (max-width: 850px) and (min-width: 500px) {
+  .homePage header nav {
+    grid-template-columns: 20% 50%;
+  }
+  .homePage header nav img {
+    width: 200px;
+  }
+
+  .homePage header nav ul {
+    grid-template-columns: repeat(4, 90px);
+  }
+  .homePage header nav ul li a {
+    font-size: 15px;
+  }
+  .homePage .me p {
+    font-size: 15px;
+    margin: 4px;
+  }
+  .homePage .me p span {
+    font-size: 17px;
+  }
+  .homePage .me {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 850px) {
+  .homePage header nav {
+    grid-template-columns: 20% 50%;
+  }
+  .homePage header nav img {
+    width: 200px;
+  }
+
+  .homePage header nav ul {
+    grid-template-columns: repeat(4, 150px);
+  }
+  .homePage .me {
+    width: 40%;
+    height: 35%;
+  }
+}
