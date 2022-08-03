@@ -1,9 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Cormorant SC", serif;
-  font-family: "Ibarra Real Nova", serif;
-  font-family: "Karla", sans-serif;
+  font-family: "Old Standard TT", serif;
   font-size: 19px;
 }
 /* 
@@ -22,7 +20,7 @@
 }
 
 .homePage {
-  background-image: url("./images/about.png");
+  background-image: url("./images/home.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -53,7 +51,6 @@
 .homePage ul li a {
   text-decoration: none;
   position: relative;
-  font-weight: bold;
   color: #49392b;
 }
 .homePage ul li a:hover {
@@ -118,48 +115,6 @@
 .logo {
   width: 100px;
 }
-/* 
-=======================
-=== Home Page Responsive ===
-======================= 
-*/
-
-@media (max-width: 850px) and (min-width: 500px) {
-  .homePage header nav {
-    grid-template-columns: 20% 50%;
-  }
-
-  .homePage header nav ul {
-    grid-template-columns: repeat(4, 90px);
-  }
-  .homePage header nav ul li a {
-    font-size: 15px;
-  }
-  .homePage .me p {
-    font-size: 15px;
-    margin: 4px;
-  }
-  .homePage .me p span {
-    font-size: 17px;
-  }
-  .homePage .me {
-    width: 60%;
-  }
-}
-
-@media (max-width: 1400px) and (min-width: 850px) {
-  .homePage header nav {
-    grid-template-columns: 20% 50%;
-  }
-
-  .homePage header nav ul {
-    grid-template-columns: repeat(4, 150px);
-  }
-  .homePage .me {
-    width: 40%;
-    height: 35%;
-  }
-}
 
 /* ================================================================== */
 /* 
@@ -207,6 +162,7 @@
 /* ============================================== */
 
 .aboutMain section {
+  margin-top: 60px;
   margin-bottom: 100px;
 }
 .aboutTitle,
@@ -297,18 +253,10 @@
 ======================= 
 */
 /* ============Education================= */
-.theCards {
-  width: 100%;
-  margin: 70px auto;
-}
-.theCards .card {
-  margin: 0 auto;
+
+.card {
+  margin: 50px auto;
   border: none;
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
-    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
-
-  /* box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; */
-
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
@@ -332,8 +280,8 @@
 }
 
 #education {
-  width: 70%;
-  margin: 0 auto;
+  width: 80%;
+  margin: 100px auto;
 }
 
 /* ============Projects================= */
@@ -430,7 +378,7 @@
 /* ================== Responsive =================== */
 /* ================================================= */
 
-@media (max-width: 950px) and (min-width: 500px) {
+@media (max-width: 1000px) and (min-width: 500px) {
   .aboutHeader nav div:nth-child(2) button {
     display: block;
   }
@@ -442,39 +390,77 @@
   }
   .aboutMe img {
     grid-column: 1 /2;
-    grid-row: 1/3;
-  }
-  .aboutMe .descOfMe {
-    grid-column: 2;
     grid-row: 1/2;
   }
+  .aboutMe .descOfMe {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
 
-  .aboutMe a {
-    grid-column: 2/3;
+  .aboutMe .aboutButns {
+    grid-column: 1/2;
     grid-row: 3;
   }
-  .theCards {
-    width: 100%;
-  }
-  .theCards .card {
+  #education.card {
     display: block;
   }
   .Sbtn {
     width: 80px;
     font-size: 15px;
   }
-}
-
-@media (max-width: 775px) {
   .AbInformation {
     margin: 10px auto;
     display: flex;
     flex-direction: column;
   }
-  .theCards {
-    width: 100%;
-  }
-  .theCards .card {
+
+  #education .card {
     display: block;
+  }
+  .aboutButns {
+    width: auto;
+  }
+}
+
+/* 
+=======================
+=== Home Page Responsive ===
+======================= 
+*/
+
+@media (max-width: 850px) and (min-width: 500px) {
+  .homePage header nav {
+    grid-template-columns: 20% 50%;
+  }
+
+  .homePage header nav ul {
+    grid-template-columns: repeat(4, 90px);
+  }
+  .homePage header nav ul li a {
+    font-size: 15px;
+  }
+  .homePage .me p {
+    font-size: 15px;
+    margin: 4px;
+  }
+  .homePage .me p span {
+    font-size: 17px;
+  }
+  .homePage .me {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 850px) {
+  .homePage header nav {
+    grid-template-columns: 20% 50%;
+  }
+
+  .homePage header nav ul {
+    grid-template-columns: repeat(4, 150px);
+  }
+  .homePage .me {
+    width: 40%;
+    height: 35%;
   }
 }
