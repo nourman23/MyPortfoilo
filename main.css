@@ -112,12 +112,18 @@
     color: #3569059e;
   }
   100% {
-    color: #57b0049e;
+    color: rgb(54, 34, 10);
   }
 }
 .logo {
   width: 100px;
 }
+/* 
+=======================
+=== Home Page Responsive ===
+======================= 
+*/
+
 @media (max-width: 850px) and (min-width: 500px) {
   .homePage header nav {
     grid-template-columns: 20% 50%;
@@ -206,7 +212,7 @@
 .aboutTitle,
 .workTitle {
   text-align: center;
-  color: #1e4800;
+  color: rgb(54, 34, 10);
 }
 
 .aboutMe {
@@ -287,9 +293,10 @@
 
 /* 
 =======================
-=== Education Page Style ===
+=== Work Page Style ===
 ======================= 
 */
+/* ============Education================= */
 .theCards {
   width: 100%;
   margin: 70px auto;
@@ -307,7 +314,7 @@
 
 #education .card-header {
   background-color: #c2bca7;
-  color: #213f06;
+  color: rgb(54, 34, 10);
   border-radius: 20px 0px 20px 0px;
 }
 
@@ -316,7 +323,7 @@
 }
 #education .card-body,
 .card-footer {
-  color: #37541d;
+  color: rgb(54, 34, 10);
 }
 #more {
   width: 150px;
@@ -328,9 +335,8 @@
   width: 70%;
   margin: 0 auto;
 }
-/* ============================================== */
 
-/* ===================================================== */
+/* ============Projects================= */
 
 #projects {
   background-color: #c2bca7;
@@ -342,7 +348,7 @@
 }
 #projects .row {
   background-color: white;
-  color: #1e4800;
+  color: rgb(54, 34, 10);
   margin: 20px;
   width: 40%;
   border-radius: 70px 0px 70px 0px;
@@ -364,7 +370,7 @@
   color: #ca955c;
   margin: 0px 15px;
 }
-
+/* ============Contact================= */
 #contact {
   position: relative;
   bottom: 0;
@@ -421,13 +427,12 @@
   border: none;
 }
 /* ================================================= */
-/* ================== Media style =================== */
+/* ================== Responsive =================== */
 /* ================================================= */
 
 @media (max-width: 950px) and (min-width: 500px) {
   .aboutHeader nav div:nth-child(2) button {
     display: block;
-    background-color: #213f069e;
   }
   .AbInformation {
     margin: 10px auto;
